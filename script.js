@@ -29,6 +29,13 @@ addTodoBtn.addEventListener("click", () => {
     }
 });
 
+addTodoInput.addEventListener("input", () => {
+    if (searchTodoInput.value.trim()); {
+        searchTodoInput.value = "";
+        renderTodos();
+    }
+})
+
 searchTodoInput.addEventListener("input", (e) => {
     const searchValue = e.target.value.trim();
     filterAndRenderFilteredTodos(searchValue);
